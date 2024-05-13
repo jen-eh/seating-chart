@@ -7,20 +7,24 @@ import Button from 'react-bootstrap/Button';
 
 function App() {
 
-
-  /*State*/
   const [input, setInput] = useState("");
-  // new state variable
   const [submittedInput, setSubmittedInput] = useState("");
-  /*On Form Submit*/
+
+  const formattedName = useMemo(() => {
+    const names = submittedInput.split(" ");
+    const formattedNames = names.map((name) => {
+      return (name.length > 1 ? `${name.charAt(0).toUpperCase()}${name.slice(1).toLowerCase()}` : `${name.charAt(0).toUpperCase()}`);
+    });
+    return formattedNames.join(" ");
+  }, [submittedInput]);
 
   const tableName = useMemo(() => {
     if (submittedInput) {
       return findTableByName(submittedInput);
     } else {
-      return ""
+      return "";
     }
-  }, [submittedInput])
+  }, [submittedInput]);
 
   return (
     <div className="App">
@@ -37,8 +41,10 @@ function App() {
             ></input>
             <Button className="submit-button" onClick={()=>setSubmittedInput(input)}>Find Table</Button>
           </form>
-          <h2>{submittedInput}</h2>
-          <h1>{tableName}</h1>
+          <div className="table-output">
+            <h2>{formattedName}</h2>
+            <h1>{tableName}</h1>
+          </div>
         </div>
       </header>
     </div>

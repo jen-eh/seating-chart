@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,12 +24,20 @@
   color: white;
 }
 
+.table-output {
+  padding: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .App-link {
   color: #61dafb;
 }
 
 .submit-button {
-  background-color: #ffbf00 !important;
+  padding: 10px !important;
+  background-color: white !important;
+  color: black !important;
+  margin: 10px !important;
 }
 
 @keyframes App-logo-spin {
