@@ -38,7 +38,7 @@ function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               type="Guest Name"
-              placeholder=""
+              placeholder="Name..."
             ></input>
             <Button className="submit-button" onClick={()=>setSubmittedInput(input)}>Find Table</Button>
           </form>
