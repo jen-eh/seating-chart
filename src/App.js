@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import React, { useState } from "react";
 import { useMemo } from 'react';
@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
+          <img src={logo} width={250} height={250} alt="Logo" />
           <form class="form-group" onSubmit={(e) => e.preventDefault()}>
             <input
               class="form-control form-control-lg"
