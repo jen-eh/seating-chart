@@ -30,7 +30,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <img src={logo} width={250} height={250} alt="Logo" />
+          <div>
+            <img src={logo} width={250} height={250} alt="Logo" />
+          </div>
           <form class="form-group" onSubmit={(e) => e.preventDefault()}>
             <input
               class="form-control form-control-lg"
